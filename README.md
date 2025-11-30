@@ -1,6 +1,4 @@
-This README provides a comprehensive technical overview of the custom Stable Diffusion implementation contained in your files. It explains the architecture, the specific role of each Python module, and the generation pipeline.
 
------
 
 # Custom Stable Diffusion Implementation (PyTorch)
 
@@ -123,4 +121,5 @@ Found in `diffusion.py`. Since the U-Net shares the same weights for every step 
   * **GPU (Recommended):** This codebase is designed for CUDA execution.
   * **Low VRAM (4GB):** If running on a lower gpu , ensure `idle_device="cpu"` is set in the pipeline. This offloads sub-models (like the VAE or CLIP) to system RAM when they are not actively being computed, preventing OOM (Out of Memory) errors.
   * **CPU Mode:** Functional but slow (approx. 10-12 mins per image on an i5).
+
 
