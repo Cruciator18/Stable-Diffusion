@@ -62,6 +62,7 @@ The system follows the standard Stable Diffusion pipeline, operating in a compre
 ### 1\. Prerequisites
 
 You need a standard Stable Diffusion checkpoint file (e.g., `v1-5-pruned-emaonly.ckpt`).
+You can download it from `https://huggingface.co/dnwalkup/StableDiffusion-v1-Releases/blob/main/v1-5-pruned-emaonly.ckpt`
 
 ### 2\. Loading the Model
 
@@ -121,5 +122,6 @@ Found in `diffusion.py`. Since the U-Net shares the same weights for every step 
   * **GPU (Recommended):** This codebase is designed for CUDA execution.
   * **Low VRAM (4GB):** If running on a lower gpu , ensure `idle_device="cpu"` is set in the pipeline. This offloads sub-models (like the VAE or CLIP) to system RAM when they are not actively being computed, preventing OOM (Out of Memory) errors.
   * **CPU Mode:** Functional but slow (approx. 10-12 mins per image on an i5).
+
 
 
